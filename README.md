@@ -1,4 +1,3 @@
-
 # 🔐 DataKeyring – Format keyring for batch ingestion
 
 🌐 Available languages: [🇬🇧 English](README.md) | [🇪🇸 Español](README.es.md)
@@ -27,32 +26,52 @@ It is designed to be used in batch processing systems where you need to read a s
 
 ---
 
+## 📦 Usage in Maven
+
+To use this package from **GitHub Packages**, add the following to your `pom.xml`:
+
+### ① Add the repository
+
+```xml
+<repositories>
+  <repository>
+    <id>github</id>
+    <name>GitHub Packages</name>
+    <url>https://maven.pkg.github.com/miguelCidPaz/Datakeyring</url>
+  </repository>
+</repositories>
+```
+
+### ② Add the dependency
+
+```xml
+<dependency>
+  <groupId>io.github.miguelCidPaz</groupId>
+  <artifactId>datakeyring</artifactId>
+  <version>0.0.2</version>
+</dependency>
+```
+
+Make sure you’ve configured authentication in your `~/.m2/settings.xml` as explained [here](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry).
+
+---
+
 ## 🧪 Tests
 
 This project includes unit tests for each of the supported formats.
 
-- Tests expect to find a test file named `testdata` with the corresponding extension inside the following folder:
-  ```
-  src/test/resources
-  ```
+Test files should be located under:
 
-- For example:
-  - `src/test/resources/testdata.csv`
-  - `src/test/resources/testdata.json`
-  - `src/test/resources/testdata.jsonl`
-  - `src/test/resources/testdata.parquet`
-
----
-
-## 📦 Usage in Maven
-
-```xml
-<dependency>
-	<groupId>com.mcp.datakey</groupId>
-	<artifactId>DataKeyring</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-</dependency>
 ```
+src/test/resources/
+```
+
+For example:
+
+- `testdata.csv`
+- `testdata.json`
+- `testdata.jsonl`
+- `testdata.parquet`
 
 ---
 
@@ -61,13 +80,13 @@ This project includes unit tests for each of the supported formats.
 ```
 src/
 ├── main/
-│   └── java/com/yourcompany/datakeyring/
+│   └── java/io/github/miguelCidPaz/datakeyring/
 │       ├── CsvReader.java
 │       ├── JsonReader.java
 │       ├── JsonlReader.java
 │       └── ParquetReader.java
 └── test/
-    └── java/com/yourcompany/datakeyring/
+    └── java/io/github/miguelCidPaz/datakeyring/
         ├── CsvReaderTest.java
         ├── JsonReaderTest.java
         ├── JsonlReaderTest.java
@@ -98,4 +117,4 @@ You can use, modify, and distribute it freely, as long as proper attribution is 
 
 ## ✍️ Author
 
-Developed by [Miguel Cid](https://github.com/miguelCidPaz) as part of a modular tabular processing stack.
+Developed by [Miguel Cid](https://github.com/miguelCidPaz)

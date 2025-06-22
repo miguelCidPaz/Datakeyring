@@ -43,13 +43,31 @@ Este proyecto incluye tests unitarios para cada uno de los formatos soportados.
 
 ## 📦 Uso en Maven
 
+Para usar este paquete desde **GitHub Packages**, añade lo siguiente a tu `pom.xml`:
+
+### ① Añade el repositorio
+
+```xml
+<repositories>
+  <repository>
+    <id>github</id>
+    <name>GitHub Packages</name>
+    <url>https://maven.pkg.github.com/miguelCidPaz/Datakeyring</url>
+  </repository>
+</repositories>
+```
+
+### ② Añade la dependencia
+
 ```xml
 <dependency>
-	<groupId>com.mcp.datakey</groupId>
-	<artifactId>DataKeyring</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+  <groupId>io.github.miguelCidPaz</groupId>
+  <artifactId>datakeyring</artifactId>
+  <version>0.0.2</version>
 </dependency>
 ```
+
+Asegúrate de haber configurado la autenticación en tu archivo `~/.m2/settings.xml` como se explica [aquí](https://docs.github.com/es/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry).
 
 ---
 
@@ -95,4 +113,4 @@ Puedes usarlo libremente, modificarlo y distribuirlo, siempre que mantengas la a
 
 ## ✍️ Autor
 
-Desarrollado por [Miguel Cid](https://github.com/miguelCidPaz) como parte de un stack modular de procesamiento tabular desacoplado.
+Desarrollado por [Miguel Cid](https://github.com/miguelCidPaz)
