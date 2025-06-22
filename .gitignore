@@ -1,0 +1,41 @@
+# ----------------------
+# Compilación y Maven
+# ----------------------
+/target/
+/*.log
+*.class
+
+# ----------------------
+# Archivos del sistema
+# ----------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------
+# Archivos de Eclipse
+# ----------------------
+.project
+.classpath
+.settings/
+*.iml
+
+# ----------------------
+# IntelliJ
+# ----------------------
+.idea/
+*.iws
+*.ipr
+
+# ----------------------
+# Archivos temporales
+# ----------------------
+*.tmp
+*.swp
+
+# ----------------------
+# Dataset de pruebas (¡incluidos!)
+# ----------------------
+!src/test/resources/testdata.csv
+!src/test/resources/testdata.json
+!src/test/resources/testdata.jsonl
+!src/test/resources/testdata.parquet
